@@ -1,16 +1,76 @@
-## Hi there 👋
+# Ренат Губаев
 
-<!--
-**ManhattanDoctor/ManhattanDoctor** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Двадцать лет пишу код: начинал с коммуникационных платформ, потом были свой продукт и корпоративная разработка, а последние годы занимаюсь распределёнными реестрами, цифровыми активами и языковыми моделями. Мне интересны системы, в которых ошибка стоит дорого и результат нужно уметь доказать, а не просто показать — финансовые платформы, реестры, криптография.
 
-Here are some ideas to get you started:
+Исследовательскую часть и продакшен я стараюсь не разделять. Обе публикации IEEE выросли из проектов, которые работают у живых пользователей, а библиотеки, которые я поддерживаю, собраны из того, что понадобилось в этих проектах не однажды.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Библиотеки
+
+Две экосистемы, десятки тысяч установок в месяц. Полный список — на [профиле в npm](https://www.npmjs.com/~renatg), здесь только то, с чего имеет смысл начинать.
+
+**@ts-core** — основание для серверных и клиентских приложений на TypeScript.
+
+| Пакет | Назначение |
+|---|---|
+| [@ts-core/common](https://www.npmjs.com/package/@ts-core/common) | Реактивные коллекции, фильтруемые DTO, транспорт команд и событий, логирование, валидация |
+| [@ts-core/backend](https://www.npmjs.com/package/@ts-core/backend) | TypeORM, AMQP, настройки через переменные окружения |
+| [@ts-core/backend-nestjs](https://www.npmjs.com/package/@ts-core/backend-nestjs) | Слой NestJS: зависимости, ошибки, сокеты, транспорт |
+| [@ts-core/angular](https://www.npmjs.com/package/@ts-core/angular) | Базовый слой Angular: язык, темы, директивы, окна |
+| [@ts-core/oauth](https://www.npmjs.com/package/@ts-core/oauth) | OAuth через Google, VK, Яндекс, Mail.ru, Keycloak, Telegram |
+| [@ts-core/openid-common](https://www.npmjs.com/package/@ts-core/openid-common) | OpenID Connect и Keycloak: токены, роли, ресурсы |
+
+Кроме этого — интернационализация, уведомления, двухфакторная аутентификация, сокеты и криптография (RSA, ГОСТ Р 34.10, secp256k1, MetaMask).
+
+**@hlf-core** — фреймворк для Hyperledger Fabric, выросший из необходимости писать chaincode так, чтобы читать его через год было не стыдно.
+
+| Пакет | Назначение |
+|---|---|
+| [@hlf-core/chaincode](https://www.npmjs.com/package/@hlf-core/chaincode) | ORM-подобный слой над реестром: сущности, каскадные связи, пагинация, валидация |
+| [@hlf-core/coin](https://www.npmjs.com/package/@hlf-core/coin) | Токены: эмиссия, переводы, удержание средств, строковая арифметика для точных расчётов |
+| [@hlf-core/transport](https://www.npmjs.com/package/@hlf-core/transport) | Транспорт команд между приложением и chaincode |
+
+## Публикации
+
+**Karma — blockchain based charity foundation platform**
+IEEE International Conference on Blockchain and Cryptocurrency, Сидней, 2021. Первый автор, в соавторстве с IBM.
+[10.1109/ICBC51069.2021.9461072](https://ieeexplore.ieee.org/document/9461072/) · [IBM Research](https://research.ibm.com/publications/karma-blockchain-based-charity-foundation-platform)
+
+**Integrating Cvartel with Hyperledger Fabric for Enhanced Biometric Authentication**
+45th IEEE International Conference on Distributed Computing Systems Workshops, Глазго, 2025.
+[10.1109/ICDCSW63273.2025.00064](https://ieeexplore.ieee.org/document/11262628)
+
+## Проекты
+
+**DFAWL** — конструктор платформ для торговли цифровыми финансовыми активами и утилитарными цифровыми правами, покрывающий весь жизненный цикл актива: выпуск, обращение, внебиржевую торговлю, краудсейлы и погашение. Состояние хранится дважды — в PostgreSQL для оперативных запросов и в Hyperledger Fabric для неизменяемого аудита, поскольку регулятору нужно одно, а пользователю совсем другое.
+
+**Karma** — благотворительная платформа на Hyperledger Fabric, принятая в Hyperledger Labs. Работает с 2023 года, на ней фонды «Со-единение», «Найди семью», «Большая перемена», «Синдром любви», «Арифметика добра». Донор видит движение своих средств в реальном времени, комиссии платформа не берёт.
+
+**Gnosis AI** — платформа с переключением между языковыми моделями, поиском по документам, генерацией изображений, синтезом и распознаванием речи.
+
+**Cvartel** — биометрическая аутентификация с верификацией через распределённый реестр, сделанная вместе с МФТИ и представленная на IEEE ICDCSW 2025.
+
+**[Occultist](https://occultist.one)** — карты традиции, где сущности связаны между собой: [Таро](https://play.google.com/store/apps/details?id=one.occultist.tarot) через астрологию и Каббалу, [демонология](https://demonology.occultist.one) через Древо Сефирот, [христианское богословие](https://theology.occultist.one) через соборы и ереси. Выросло из пет-проекта, сейчас более трёхсот семидесяти тысяч пользователей, веб и Android.
+
+**Vichatter** — социальная сеть для видеообщения, один из крупнейших видеочатов рунета в своё время: больше трёх миллионов пользователей и до пятисот тысяч визитов в день. Мой первый опыт продукта, сделанного с нуля и своими руками, от идеи до команды.
+
+## Опыт
+
+| Годы | Место | Роль |
+|---|---|---|
+| 2025 — сейчас | DFAWL | Архитектор, fullstack-разработчик |
+| 2022 — 2025 | Лаборатория блокчейн ChainLab | Руководитель команды |
+| 2018 — 2022 | Норильский Никель / Symbridge | Руководитель команды разработки |
+| 2010 — 2018 | Vichatter | Основатель, CEO |
+| 2007 — 2010 | CommuniGate Systems | Ведущий программист |
+
+## Образование
+
+**МФТИ**, магистр, 2010 — физика и прикладная математика, факультет физической и квантовой электроники, кафедра высокопроизводительных вычислительных систем. Позже читал лекции о смарт-контрактах Ethereum в магистерской программе МФТИ по блокчейну.
+
+**РАНХиГС**, магистр, 2012 — информационный менеджмент, бизнес-школа IT-управления.
+
+## Связь
+
+Если какая-то из библиотек пригодилась или сломалась — заводите issue в соответствующем репозитории, так я увижу быстрее всего. По остальному:
+
+[Telegram](https://t.me/renatgubaev) · [LinkedIn](https://ru.linkedin.com/in/renat-gubaev-a50349154) · renat.gubaev@gmail.com
